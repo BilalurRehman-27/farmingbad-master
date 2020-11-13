@@ -28,16 +28,12 @@ const Nav: React.FC = () => {
 }
 
 const MenuWrap = styled.div`
-  display: flex;
-  justify-content: space-between;
-  padding: 0 50px;
-  @media (max-width: 767px) {
-    &.menu-wrap {
-      display: flex !important;
-      justify-content: space-between !important;
-      padding: 0 10px !important;
-    }
-  }
+@media only screen and (max-width: 767px) {
+  display: none;
+}
+  @media only screen and (min-width: 768px) {
+    display:flex
+}
 `
 
 const StyledNav = styled.nav`

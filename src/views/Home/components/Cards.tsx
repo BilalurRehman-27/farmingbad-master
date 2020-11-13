@@ -52,14 +52,26 @@ const Cards: React.FC = () => {
   )
 }
 
-const Section = styled.div``
+const Section = styled.div`
+@media (max-width: 767px) {
+  flex-direction: flex;
+}
+`
 const SectionRow = styled.div`
+@media (max-width: 767px) {
+  flex-direction: column;
+  margin-left: 0px;
+}
   display: flex;
-  padding-left: 170px;
-  padding-right: 170px;
+  padding-left: 120px;
+  padding-right: 120px;
   margin-bottom: 25px;
 `
 const Card = styled.div`
+@media (max-width: 767px) {
+  margin-left: 0px;
+  margin-bottom: 20px;
+}
   float: left;
   width: 268px;
   height: 150px;

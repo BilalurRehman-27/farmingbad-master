@@ -30,6 +30,12 @@ const Footer: React.FC = () => (
 )
 
 const SectionRow = styled.div`
+@media (max-width: 767px) {
+  flex-direction: column;
+}
+content: "";
+display: table;
+clear: both;
   display: flex;
   padding-left: 170px;
   padding-right: 170px;
@@ -37,6 +43,9 @@ const SectionRow = styled.div`
 `
 const ColumnFooter = styled.div`
   display: flex;
+  float: left;
+  width: 16%;
+  padding: 0 10px;
   float: left;
   width: 16%;
   padding: 0 10px;

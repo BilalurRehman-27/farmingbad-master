@@ -35,6 +35,9 @@ const AccountButton: React.FC<AccountButtonProps> = (props) => {
 }
 
 const NavImage = styled.img`
+@media (max-width: 767px) {
+  display:none;
+}
   height: 47px;
   position: relative;
   bottom: 5px;

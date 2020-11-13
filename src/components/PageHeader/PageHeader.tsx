@@ -36,7 +36,7 @@ const StyledIcon = styled.div`
   height: 120px;
   line-height: 120px;
   text-align: center;
-  width: 120px;
+  width: 100%;
 `
 
 const StyledTitle = styled.h1`
