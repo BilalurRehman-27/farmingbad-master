@@ -12,7 +12,7 @@ const Nav: React.FC = () => {
       <StyledLink exact activeClassName="active" to="/">
         <HomeImage src={Home}></HomeImage>
       </StyledLink>
-      <StyledLink exact to="/farms">
+      <StyledLink exact to="/rvlLab">
         <RVImage src={RVLab}></RVImage>
       </StyledLink>
       <StyledLink exact to="/farms1">
@@ -48,19 +48,19 @@ const NftImage = styled.img`
 `
 
 const StyledLink = styled(NavLink)`
-  color: ${(props) => props.theme.color.grey[400]};
-  padding-left: ${(props) => props.theme.spacing[3]}px;
-  padding-right: ${(props) => props.theme.spacing[3]}px;
+  color: ${props => props.theme.color.grey[400]};
+  padding-left: ${props => props.theme.spacing[3]}px;
+  padding-right: ${props => props.theme.spacing[3]}px;
   text-decoration: none;
   &:hover {
-    color: ${(props) => props.theme.color.grey[500]};
+    color: ${props => props.theme.color.grey[500]};
   }
   &.active {
-    color: ${(props) => props.theme.color.primary.main};
+    color: ${props => props.theme.color.primary.main};
   }
   @media (max-width: 400px) {
-    padding-left: ${(props) => props.theme.spacing[2]}px;
-    padding-right: ${(props) => props.theme.spacing[2]}px;
+    padding-left: ${props => props.theme.spacing[2]}px;
+    padding-right: ${props => props.theme.spacing[2]}px;
   }
 `
 
