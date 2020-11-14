@@ -7,18 +7,20 @@ import Page from '../../components/Page'
 import PageHeader from './components/PageHeader'
 import Spacer from '../../components/Spacer'
 import Balances from '../Home/components/Balances'
-import Cards from '../Home/components/Cards'
 import Footer from '../../components/Footer'
 import ButtonsBar from './components/ButtonsBar'
+import Cards from './components/Cards'
 
 const Home: React.FC = () => {
   return (
-    <Page>
-      <PageHeader />
-
-      <ButtonsBar />
-      <Footer />
-    </Page>
+    <>
+      <Page>
+        <PageHeader />
+        <ButtonsBar />
+        <Cards />
+        <Footer />
+      </Page>
+    </>
   )
 }
 

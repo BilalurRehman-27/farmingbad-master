@@ -13,7 +13,7 @@ const Nav: React.FC = () => {
         <StyledLink exact activeClassName="active" to="/">
           <HomeImage src={Home}></HomeImage>
         </StyledLink>
-        <StyledLink exact to="/farms">
+        <StyledLink exact to="/rvlLab">
           <RVImage src={RVLab}></RVImage>
         </StyledLink>
         <StyledLink exact to="/farms1">
