@@ -6,8 +6,8 @@ import Logo from '../Logo'
 
 import AccountButton from './components/AccountButton'
 import Nav from './components/Nav'
-
-import NavMobile from './components/NavMobile';
+import NewNav from './components/NewMobileNav'
+import NavMobile from './components/NavMobile'
 
 interface TopBarProps {
   onPresentMobileMenu: () => void
@@ -20,7 +20,7 @@ const TopBar: React.FC<TopBarProps> = ({ onPresentMobileMenu }) => {
         <StyledLogoWrapper>
           <Logo />
         </StyledLogoWrapper>
-        <NavMobile />
+        <NewNav />
         <Nav />
         <StyledAccountButtonWrapper>
           <AccountButton />
