@@ -6,54 +6,45 @@ import TimeLock from '../../assets/images/Tmelock.png'
 import Discord from '../../assets/images/Discord.png'
 import Telegram from '../../assets/images/Telegram 1.png'
 import Twitter from '../../assets/images/Twitter 1.png'
+
 const Footer: React.FC = () => (
   <SectionRow>
-    <ColumnFooter className="column-footer">
+    <ColumnFooter>
       <FooterImage src={Contract}></FooterImage>
     </ColumnFooter>
-    <ColumnFooter className="column-footer">
+    <ColumnFooter>
       <FooterImage src={Uniswap}></FooterImage>
     </ColumnFooter>
-    <ColumnFooter className="column-footer">
+    <ColumnFooter>
       <FooterImage src={TimeLock}></FooterImage>
     </ColumnFooter>
-    <ColumnFooter className="column-footer">
+    <ColumnFooter>
       <FooterImage src={Discord}></FooterImage>
     </ColumnFooter>
-    <ColumnFooter className="column-footer">
+    <ColumnFooter>
       <FooterImage src={Telegram}></FooterImage>
     </ColumnFooter>
-    <ColumnFooter className="column-footer">
+    <ColumnFooter>
       <FooterImage src={Twitter}></FooterImage>
     </ColumnFooter>
   </SectionRow>
 )
 
 const SectionRow = styled.div`
-@media (max-width: 767px) {
-  flex-direction: column;
-}
-content: "";
-display: table;
-clear: both;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   display: flex;
-  padding-left: 170px;
-  padding-right: 170px;
-  margin-bottom: 25px;
+  width: 80%;
+  align-items: center;
+  margin: auto;
 `
 const ColumnFooter = styled.div`
-  display: flex;
-  float: left;
-  width: 16%;
-  padding: 0 10px;
-  float: left;
-  width: 16%;
-  padding: 0 10px;
+  width: 122px;
+  padding: 1rem;
+  align-items: center;
 `
 const FooterImage = styled.img`
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 1rem;
 `
 
 export default Footer

@@ -63,19 +63,19 @@ const NftImage = styled.img`
 `
 
 const StyledLink = styled(NavLink)`
-  color: ${(props) => props.theme.color.grey[400]};
-  padding-left: ${(props) => props.theme.spacing[3]}px;
-  padding-right: ${(props) => props.theme.spacing[3]}px;
+  color: ${props => props.theme.color.grey[400]};
+  padding-left: ${props => props.theme.spacing[3]}px;
+  padding-right: ${props => props.theme.spacing[3]}px;
   text-decoration: none;
   &:hover {
-    color: ${(props) => props.theme.color.grey[500]};
+    color: ${props => props.theme.color.grey[500]};
   }
   &.active {
-    color: ${(props) => props.theme.color.primary.main};
+    color: ${props => props.theme.color.primary.main};
   }
   @media (max-width: 400px) {
-    padding-left: ${(props) => props.theme.spacing[2]}px;
-    padding-right: ${(props) => props.theme.spacing[2]}px;
+    padding-left: ${props => props.theme.spacing[2]}px;
+    padding-right: ${props => props.theme.spacing[2]}px;
   }
 `
 
@@ -109,12 +109,11 @@ const Menu = (props: any) => {
 }
 
 const StyledBurger = styled.button<{ open: boolean }>`
-  position: absolute;
-  top: 5%;
-  left: 2rem;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  align-items: center;
   width: 2rem;
   height: 2rem;
   background: transparent;
@@ -122,6 +121,11 @@ const StyledBurger = styled.button<{ open: boolean }>`
   cursor: pointer;
   padding: 0;
   z-index: 10;
+  float: right;
+
+  @media (min-width: 777px) {
+    display: none;
+  }
 
   &:focus {
     outline: none;
@@ -159,6 +163,14 @@ const MenuWrap = styled.div`
   }
 `
 
+const MobileNavBarConatiner = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+`
+
 const Burger = (props: any) => {
   const { open, setOpen } = props
   return (
@@ -174,12 +186,10 @@ const MobileNavBar = () => {
   const [open, setOpen] = React.useState(false)
   const node = React.useRef()
   return (
-    <div ref={node}>
-      {/* <MenuWrap className="menu-wrap"> */}
+    <MobileNavBarConatiner ref={node}>
       <Burger open={open} setOpen={setOpen} />
       <Menu open={open} setOpen={setOpen} />
-      {/* </MenuWrap> */}
-    </div>
+    </MobileNavBarConatiner>
   )
 }
 

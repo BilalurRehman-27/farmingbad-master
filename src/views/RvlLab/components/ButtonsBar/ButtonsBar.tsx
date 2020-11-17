@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
 import uniswap from '../../../../assets/images/UniSwap.png'
 import sushi from '../../../../assets/images/SushiSwap.png'
@@ -7,18 +7,18 @@ import sashimi from '../../../../assets/images/SashimiSwap.png'
 import yfvalue from '../../../../assets/images/YFValue.png'
 import lunaswap from '../../../../assets/images/lunaswap 1.png'
 import dodo from '../../../../assets/images/dodo 1.png'
+import { RVLContext } from '../../../../contexts/rvlLab/rvlContex'
 
 const ButtonsBarContainer = styled.section`
   display: flex;
-  padding-left: 60px;
-  padding-right: 60px;
-  margin-bottom: 25px;
+  justify-content: space-evenly;
+  padding: 1rem;
+  flex-wrap: wrap;
 `
 
 const ColumnSection = styled.div`
-  float: left;
-  width: 14%;
-  padding: 0 10px;
+  margin: 0 0.5rem;
+  cursor: pointer;
 `
 
 const BoxContainer = styled.div`
@@ -86,37 +86,76 @@ const LunaSwap = styled.img`
   }
 `
 
-const ButtonsBar = () => (
-  <ButtonsBarContainer>
-    <ColumnSection>
-      <BoxContainer />
-      <UniSwapImg className="uniswap" src={uniswap} alt="" />
-    </ColumnSection>
-    <ColumnSection>
-      <BoxContainer />
-      <SushiImg className="sushi" src={sushi} alt="" />
-    </ColumnSection>
-    <ColumnSection>
-      <BoxContainer />
-      <PickleImg className="pickle" src={pickle} alt="" />
-    </ColumnSection>
-    <ColumnSection>
-      <BoxContainer />
-      <SashimiImg className="sashimi" src={sashimi} alt="" />
-    </ColumnSection>
-    <ColumnSection>
-      <BoxContainer />
-      <YFValue className="yfvalue" src={yfvalue} alt="" />
-    </ColumnSection>
-    <ColumnSection>
-      <BoxContainer />
-      <LunaSwap className="lunaswap" src={lunaswap} />
-    </ColumnSection>
-    <ColumnSection>
-      <BoxContainer />
-      <Dodo className="dodo" src={dodo} />
-    </ColumnSection>
-  </ButtonsBarContainer>
-)
+const ButtonsBar = () => {
+  const context = useContext(RVLContext)
+
+  const changeImage = React.useCallback(
+    (name: any) => {
+      context.setCurrentImage(name)
+    },
+    [context.setCurrentImage],
+  )
+  return (
+    <ButtonsBarContainer>
+      <ColumnSection>
+        <BoxContainer />
+        <UniSwapImg
+          onClick={() => changeImage('blue')}
+          className="uniswap"
+          src={uniswap}
+          alt=""
+        />
+      </ColumnSection>
+      <ColumnSection>
+        <BoxContainer />
+        <SushiImg
+          onClick={() => changeImage('sushiSwap')}
+          className="sushi"
+          src={sushi}
+          alt=""
+        />
+      </ColumnSection>
+      <ColumnSection>
+        <BoxContainer />
+        <PickleImg
+          onClick={() => changeImage('pickle')}
+          className="pickle"
+          src={pickle}
+          alt=""
+        />
+      </ColumnSection>
+      <ColumnSection>
+        <BoxContainer />
+        <SashimiImg
+          onClick={() => changeImage('sushi')}
+          className="sashimi"
+          src={sashimi}
+          alt=""
+        />
+      </ColumnSection>
+      <ColumnSection>
+        <BoxContainer />
+        <YFValue
+          onClick={() => changeImage('valueVfv')}
+          className="yfvalue"
+          src={yfvalue}
+          alt=""
+        />
+      </ColumnSection>
+      <ColumnSection>
+        <BoxContainer />
+        <LunaSwap
+          onClick={() => changeImage('luna')}
+          className="lunaswap"
+          src={lunaswap}
+        />
+      </ColumnSection>
+      <ColumnSection>
+        <BoxContainer />
+        <Dodo onClick={() => changeImage('dodo')} className="dodo" src={dodo} />
+      </ColumnSection>
+    </ButtonsBarContainer>
+  )
+}
 
 export default ButtonsBar

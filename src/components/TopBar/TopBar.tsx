@@ -45,7 +45,6 @@ const StyledTopBar = styled.header`
 const StyledTopBarInner = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: 0 50px;
 `
 const StyledNavWrapper = styled.div`
   display: flex;

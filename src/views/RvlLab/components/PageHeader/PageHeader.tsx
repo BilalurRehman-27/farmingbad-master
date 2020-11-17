@@ -1,13 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
-import logoImage from '../../../../assets/images/Blue1 1.png'
+import logoImage from '../../../../assets/images/Blue.png'
+import { RVLContext } from '../../../../contexts/rvlLab/rvlContex'
 
-const PageHeaderContainer = styled.div`
-  margin-bottom: -30px;
-`
+const PageHeaderContainer = styled.div``
 const Eclipse = styled.div`
   position: relative;
   //left: 622px;
+  margin: auto;
   top: 22px;
   width: 124.67px;
   height: 128.82px;
@@ -15,11 +15,14 @@ const Eclipse = styled.div`
   border: 3px solid #ffffff;
   box-shadow: inset 8px 8px 8px 4px rgba(0, 0, 0, 0.5);
   border-radius: 50%;
+
+  @media (max-width: 767px) {
+    font-size: 35px;
+  }
 `
 const LogoAdjustment = styled.img`
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
   /* Blue1 1 */
   position: relative;
   width: 150px;
@@ -31,11 +34,13 @@ const LogoAdjustment = styled.img`
 `
 
 const TextContent = styled.div`
-  position: absolute;
   width: 622px;
   height: 66px;
-  left: 370px;
-  top: 250px;
+
+  @media (max-width: 767px) {
+    font-size: 35px;
+  }
+
   font-family: 'Cooper Md BT' !important;
   font-style: normal;
   font-weight: normal;
@@ -46,12 +51,22 @@ const TextContent = styled.div`
   text-shadow: 8px 6px 6px rgba(0, 0, 0, 0.4);
 `
 
-const PageHeader = () => (
-  <PageHeaderContainer>
-    <Eclipse />
-    <LogoAdjustment src={logoImage} alt="logo" />
-    <TextContent>Los Farminos Hermanos</TextContent>
-  </PageHeaderContainer>
-)
+const EclipseContainer = styled.div`
+  height: 200px;
+`
+
+const PageHeader = () => {
+  const contexext = useContext(RVLContext)
+  return (
+    <PageHeaderContainer>
+      <EclipseContainer>
+        <Eclipse />
+        <LogoAdjustment src={contexext.currentImage} alt="logo" />
+      </EclipseContainer>
+
+      <TextContent>Los Farminos Hermanos</TextContent>
+    </PageHeaderContainer>
+  )
+}
 
 export default PageHeader

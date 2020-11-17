@@ -26,7 +26,7 @@ const StyledResponsiveWrapper = styled.div`
   display: block; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
+  padding-top: 40px; /* Location of the box */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
@@ -34,13 +34,13 @@ const StyledResponsiveWrapper = styled.div`
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0, 0, 0); /* Fallback color */
   background-color: rgba(0, 0, 0, 0.4);
-  @media (max-width: ${(props) => props.theme.breakpoints.mobile}px) {
+  @media (max-width: ${props => props.theme.breakpoints.mobile}px) {
     flex: 1;
     position: absolute;
     top: 100%;
     right: 0;
     left: 0;
-    max-height: calc(100% - ${(props) => props.theme.spacing[4]}px);
+    max-height: calc(100% - ${props => props.theme.spacing[4]}px);
     animation: ${mobileKeyframes} 0.3s forwards ease-out;
   }
 `

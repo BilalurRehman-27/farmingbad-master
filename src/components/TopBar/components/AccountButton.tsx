@@ -8,7 +8,7 @@ import AccountModal from './AccountModal'
 import Wallet from '../../../assets/images/Rectangle.png'
 interface AccountButtonProps {}
 
-const AccountButton: React.FC<AccountButtonProps> = (props) => {
+const AccountButton: React.FC<AccountButtonProps> = props => {
   const [onPresentAccountModal] = useModal(<AccountModal />)
   const [onPresentWalletProviderModal] = useModal(
     <WalletProviderModal />,
@@ -35,25 +35,27 @@ const AccountButton: React.FC<AccountButtonProps> = (props) => {
 }
 
 const NavImage = styled.img`
-@media (max-width: 767px) {
-  display:none;
-}
+  @media (max-width: 767px) {
+    height: 36px;
+    position: relative;
+    bottom: 5px;
+  }
   height: 47px;
   position: relative;
   bottom: 5px;
 `
 const StyledLink = styled.nav`
-  padding-left: ${(props) => props.theme.spacing[3]}px;
-  padding-right: ${(props) => props.theme.spacing[3]}px;
+  padding-left: ${props => props.theme.spacing[3]}px;
+  padding-right: ${props => props.theme.spacing[3]}px;
   &:hover {
-    color: ${(props) => props.theme.color.grey[500]};
+    color: ${props => props.theme.color.grey[500]};
   }
   &.active {
-    color: ${(props) => props.theme.color.primary.main};
+    color: ${props => props.theme.color.primary.main};
   }
   @media (max-width: 400px) {
-    padding-left: ${(props) => props.theme.spacing[2]}px;
-    padding-right: ${(props) => props.theme.spacing[2]}px;
+    padding-left: ${props => props.theme.spacing[2]}px;
+    padding-right: ${props => props.theme.spacing[2]}px;
   }
   cursor: pointer;
 `
