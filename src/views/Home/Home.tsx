@@ -14,7 +14,7 @@ const Home: React.FC = () => {
   return (
     <Page>
       <PageHeader
-        icon={<img src={logo} height={120} alt="" />}
+        icon={<img src={logo} height={100} alt="" />}
         title=""
         subtitle=""
       />

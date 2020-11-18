@@ -40,6 +40,10 @@ const MyAccountWalletPopup: React.FC<MyAccountWalletProps> = props => {
 }
 
 const EclipseCenter = styled.div`
+@media (max-width: 767px) {
+  left: 90px;
+  top: 4px;
+}
   position: relative;
   left: 270px;
   top: 22px;
@@ -63,6 +67,11 @@ const LogoImg = styled.img`
   top: -140px;
 `
 const Balance = styled.p`
+@media (max-width: 767px) {
+  left: 35px;
+  top: 225px;
+  font-size:30px;
+}
   position: absolute;
   left: 181px;
   top: 225px;
@@ -76,6 +85,9 @@ const Balance = styled.p`
 `
 
 const ConnectButton = styled.button`
+@media (max-size = 767px) {
+  padding:0px!important;
+}
   padding: 5px 60px 5px 60px;
   border-radius: 14px;
   background: linear-gradient(

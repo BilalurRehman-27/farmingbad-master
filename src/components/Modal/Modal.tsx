@@ -63,6 +63,10 @@ const StyledModal = styled.div`
   -webkit-animation-duration: 0.4s;
   animation-name: animatetop;
   animation-duration: 0.4s;
+  @media (max-width: 767px) {
+    width: 80%!important;
+    top:50px
+  }
 `
 
 const StyledModalContent = styled.div``

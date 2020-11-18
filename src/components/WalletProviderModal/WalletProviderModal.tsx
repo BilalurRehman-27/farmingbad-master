@@ -64,11 +64,14 @@ const WalletProviderModal: React.FC<ModalProps> = ({ onDismiss }) => {
 
 const Row = styled.div`
   display: flex;
-  @media (max-size = 767px) {
+  @media (max-width: 767px) {
     flex-direction: row;
   }
 `
 const ColumnPopup = styled.div`
+@media (max-width: 767px) {
+  height: 180px;
+}
   float: left;
   width: 50%;
   padding: 10px;
@@ -82,6 +85,11 @@ const MetaImg = styled.img`
 `
 
 const ConnectButton = styled.button`
+@media (max-width: 767px) {
+  padding:5px 5px 5px 5px;
+  border: 2px solid #ffffff;
+  left:-14px;
+}
   padding: 5px 60px 5px 60px;
   border-radius: 14px;
   background: linear-gradient(

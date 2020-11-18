@@ -19,13 +19,13 @@ const Footer: React.FC = () => (
       <FooterImage src={TimeLock}></FooterImage>
     </ColumnFooter>
     <ColumnFooter>
-      <FooterImage src={Discord}></FooterImage>
+      <FooterImage className="discord" src={Discord}></FooterImage>
     </ColumnFooter>
     <ColumnFooter>
       <FooterImage src={Telegram}></FooterImage>
     </ColumnFooter>
     <ColumnFooter>
-      <FooterImage src={Twitter}></FooterImage>
+      <FooterImage className="twitter" src={Twitter}></FooterImage>
     </ColumnFooter>
   </SectionRow>
 )
@@ -37,11 +37,24 @@ const SectionRow = styled.div`
   width: 80%;
   align-items: center;
   margin: auto;
+  @media (max-width: 767px) {
+    margin-left: 0rem;
+  }
 `
 const ColumnFooter = styled.div`
+@media (max-width: 767px) {
+  padding: 0rem;
+}
   width: 122px;
+  height: 100px;
   padding: 1rem;
   align-items: center;
+  .discord{
+    margin-top:4px;
+  }
+  .twitter{
+    margin-top:10px;
+  }
 `
 const FooterImage = styled.img`
   margin: 1rem;

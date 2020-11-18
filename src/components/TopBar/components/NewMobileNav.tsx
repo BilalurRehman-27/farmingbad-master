@@ -126,7 +126,9 @@ const StyledBurger = styled.button<{ open: boolean }>`
   @media (min-width: 777px) {
     display: none;
   }
-
+@media (max-width: 767px){
+  top:-15px;
+}
   &:focus {
     outline: none;
   }

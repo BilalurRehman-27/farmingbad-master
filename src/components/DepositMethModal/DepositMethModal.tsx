@@ -95,7 +95,7 @@ const Elipse = styled.div`
   position: relative;
   //left: 622px;
   margin: auto;
-  padding-bottom: 1rem;
+  padding-bottom: 0rem;
   margin-bottom: 4rem;
   margin-top: 2rem;
   width: 124.67px;
@@ -107,6 +107,8 @@ const Elipse = styled.div`
 
   @media (max-width: 767px) {
     font-size: 35px;
+    padding-bottom: 0rem;
+    margin-bottom: 1.5rem;
   }
 `
 
@@ -140,13 +142,15 @@ const TokenStaked = styled.p`
   font-size: 18px;
   line-height: 22px;
   color: #ffffff;
+  
 `
 
 const LogoImage = styled.img`
   padding-left: 10rem;
 
   @media (max-width: 737px) {
-    padding-left: 1rem;
+    padding-left: 4rem;
+    padding-top: 1ren;
     // width: 100px;
   }
 `
@@ -167,8 +171,8 @@ const ButtonContainer = styled.div`
   display: flex;
   flex-direction: row;
   @media (max-width: 737px) {
-    padding: 1rem;
-    flex-direction: column;
+    padding: 0rem;
+    flex-direction: row;
   }
 `
 
@@ -189,6 +193,7 @@ const BalanceForming = styled.p`
   margin: auto;
   @media (max-width: 737px) {
     font-size: 18px;
+    padding-top:1rem;
   }
 `
 const ButtonCanceled = styled.button`
@@ -216,6 +221,11 @@ const Earned = styled.p`
   font-size: 18px;
   line-height: 22px;
   color: #ffffff;
+  @media (max-width: 737px) {
+    font-size: 18px;
+    padding-left:1rem;
+    line-height:0
+    }
 `
 const ModelFooter = styled.div`
   display: flex;

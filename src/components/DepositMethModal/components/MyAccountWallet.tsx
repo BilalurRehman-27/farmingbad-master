@@ -49,6 +49,7 @@ const EclipseCenter = styled.div`
   border: 3px solid #ffffff;
   box-shadow: inset 8px 8px 8px 4px rgba(0, 0, 0, 0.5);
   border-radius: 50%;
+
 `
 const LogoImg = styled.img`
   display: block;

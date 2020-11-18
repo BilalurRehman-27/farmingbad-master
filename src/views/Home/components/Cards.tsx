@@ -60,6 +60,8 @@ const SectionRow = styled.div`
   @media (max-width: 767px) {
     flex-direction: column;
     margin-left: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
   }
   display: flex;
   padding-left: 120px;

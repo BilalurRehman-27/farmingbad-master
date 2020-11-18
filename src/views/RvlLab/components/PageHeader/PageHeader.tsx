@@ -37,6 +37,7 @@ const TextContent = styled.div`
 
   @media (max-width: 767px) {
     font-size: 35px;
+    width: 400px;
   }
 
   font-family: 'Cooper Md BT' !important;
