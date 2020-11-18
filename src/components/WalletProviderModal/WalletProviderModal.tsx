@@ -64,6 +64,9 @@ const WalletProviderModal: React.FC<ModalProps> = ({ onDismiss }) => {
 
 const Row = styled.div`
   display: flex;
+  @media (max-size = 767px) {
+    flex-direction: row;
+  }
 `
 const ColumnPopup = styled.div`
   float: left;
@@ -107,34 +110,5 @@ const CloseButton = styled.button`
   border: 3px solid #ffffff;
   width: 100%;
 `
+
 export default WalletProviderModal
-// const StyledWalletsWrapper = styled.div`
-//   display: flex;
-//   flex-wrap: wrap;
-//   @media (max-width: ${(props) => props.theme.breakpoints.mobile}px) {
-//     flex-direction: column;
-//     flex-wrap: none;
-//   }
-// `
-
-// const StyledWalletCard = styled.div`
-//   flex-basis: calc(50% - ${(props) => props.theme.spacing[2]}px);
-// `
-
-/* <StyledWalletsWrapper>
-          <StyledWalletCard>
-            <WalletCard
-              icon={<img src={metamaskLogo} style={{ height: 32 }} />}
-              onConnect={() => connect('injected')}
-              title="Metamask"
-            />
-          </StyledWalletCard>
-          <Spacer size="sm" />
-          <StyledWalletCard>
-            <WalletCard
-              icon={<img src={walletConnectLogo} style={{ height: 24 }} />}
-              onConnect={() => connect('walletconnect')}
-              title="WalletConnect"
-            />
-          </StyledWalletCard>
-        </StyledWalletsWrapper> */

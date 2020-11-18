@@ -33,6 +33,8 @@ const MenuWrap = styled.div`
   }
   @media only screen and (min-width: 768px) {
     display: flex;
+    margin: auto;
+    margin-top: 8px;
   }
 `
 
@@ -59,19 +61,19 @@ const NftImage = styled.img`
 `
 
 const StyledLink = styled(NavLink)`
-  color: ${(props) => props.theme.color.grey[400]};
-  padding-left: ${(props) => props.theme.spacing[3]}px;
-  padding-right: ${(props) => props.theme.spacing[3]}px;
+  color: ${props => props.theme.color.grey[400]};
+  padding-left: ${props => props.theme.spacing[3]}px;
+  padding-right: ${props => props.theme.spacing[3]}px;
   text-decoration: none;
   &:hover {
-    color: ${(props) => props.theme.color.grey[500]};
+    color: ${props => props.theme.color.grey[500]};
   }
   &.active {
-    color: ${(props) => props.theme.color.primary.main};
+    color: ${props => props.theme.color.primary.main};
   }
   @media (max-width: 400px) {
-    padding-left: ${(props) => props.theme.spacing[2]}px;
-    padding-right: ${(props) => props.theme.spacing[2]}px;
+    padding-left: ${props => props.theme.spacing[2]}px;
+    padding-right: ${props => props.theme.spacing[2]}px;
   }
 `
 

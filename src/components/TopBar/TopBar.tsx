@@ -34,10 +34,11 @@ const StyledLogoWrapper = styled.div`
   @media (max-width: 400px) {
     width: auto;
   }
+  margin-top: -1.5rem;
 `
 
 const StyledTopBar = styled.header`
-  height: 80px;
+  height: 40px;
   background: rgba(76, 255, 183, 0.5);
   padding: 10px 0;
 `
@@ -60,6 +61,8 @@ const StyledAccountButtonWrapper = styled.div`
   display: flex;
   justify-content: flex-end;
   width: 156px;
+
+  margin-bottom: auto;
   @media (max-width: 400px) {
     justify-content: center;
     width: auto;

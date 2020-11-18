@@ -25,10 +25,8 @@ const LogoAdjustment = styled.img`
   margin: auto;
   /* Blue1 1 */
   position: relative;
-  width: 150px;
+  width: 135px;
   height: 147px;
-  left: 15px;
-  top: -116px;
   filter: drop-shadow(6px 8px 8px rgba(0, 0, 0, 0.35));
   margin-bottom: 10px;
 `
@@ -60,8 +58,9 @@ const PageHeader = () => {
   return (
     <PageHeaderContainer>
       <EclipseContainer>
-        <Eclipse />
-        <LogoAdjustment src={contexext.currentImage} alt="logo" />
+        <Eclipse>
+          <LogoAdjustment src={contexext.currentImage} alt="logo" />
+        </Eclipse>
       </EclipseContainer>
 
       <TextContent>Los Farminos Hermanos</TextContent>

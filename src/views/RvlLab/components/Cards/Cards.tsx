@@ -42,6 +42,7 @@ const APY = styled.p`
   color: #ffffff;
   margin-left: auto;
   padding-right: 0.4rem;
+  font-family: Fjalla One;
 `
 const VAL = styled.p`
   /* 235.6% */
@@ -55,12 +56,14 @@ const VAL = styled.p`
   padding: 0;
   margin: 0;
   padding-right: 1rem;
+  font-family: Fjalla One;
 `
 const Meth = styled.p`
   font-size: 12px;
   line-height: 15px;
   color: #ffffff;
   margin: 0;
+  font-family: Fjalla One;
 `
 const Rect = styled.div`
   background: rgba(169, 186, 105, 0.85);

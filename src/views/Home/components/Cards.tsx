@@ -6,7 +6,7 @@ import Price from '../../../assets/images/Price.png'
 import CirculatingSupply from '../../../assets/images/Circulating Supply.png'
 import Burned from '../../../assets/images/Burned.png'
 import BurnRate from '../../../assets/images/burn rate copy 1.png'
-import Footer from '../../../components/Footer'
+
 const Cards: React.FC = () => {
   return (
     <Section>
@@ -47,31 +47,30 @@ const Cards: React.FC = () => {
           <BurnedRateText>Average tokens burned per block (24h)</BurnedRateText>
         </Card>
       </SectionRow>
-      <Footer />
     </Section>
   )
 }
 
 const Section = styled.div`
-@media (max-width: 767px) {
-  flex-direction: flex;
-}
+  @media (max-width: 767px) {
+    flex-direction: flex;
+  }
 `
 const SectionRow = styled.div`
-@media (max-width: 767px) {
-  flex-direction: column;
-  margin-left: 0px;
-}
+  @media (max-width: 767px) {
+    flex-direction: column;
+    margin-left: 0px;
+  }
   display: flex;
   padding-left: 120px;
   padding-right: 120px;
   margin-bottom: 25px;
 `
 const Card = styled.div`
-@media (max-width: 767px) {
-  margin-left: 0px;
-  margin-bottom: 20px;
-}
+  @media (max-width: 767px) {
+    margin-left: 0px;
+    margin-bottom: 20px;
+  }
   float: left;
   width: 268px;
   height: 150px;
@@ -127,7 +126,7 @@ const BalanceApi = styled.div`
 const PendingText = styled.p`
   width: 156px;
   height: 20px;
-  font-family: 'Fjalla One', sans-serif;
+  font-family: Fjalla One;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -140,7 +139,7 @@ const PendingText = styled.p`
 const ValueText = styled.p`
   width: 156px;
   height: 20px;
-  font-family: 'Fjalla One', sans-serif;
+  font-family: Fjalla One;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -153,7 +152,7 @@ const ValueText = styled.p`
 const TokenText = styled.p`
   width: 200px;
   height: 20px;
-  font-family: 'Fjalla One', sans-serif;
+  font-family: Fjalla One;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -166,7 +165,7 @@ const TokenText = styled.p`
 const CirculatingText = styled.p`
   width: 156px;
   height: 20px;
-  font-family: 'Fjalla One', sans-serif;
+  font-family: Fjalla One;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -179,7 +178,7 @@ const CirculatingText = styled.p`
 const BurnedText = styled.p`
   width: 296px;
   height: 20px;
-  font-family: 'Fjalla One', sans-serif;
+  font-family: Fjalla One;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -192,7 +191,7 @@ const BurnedText = styled.p`
 const BurnedRateText = styled.p`
   width: 296px;
   height: 20px;
-  font-family: 'Fjalla One', sans-serif;
+  font-family: Fjalla One;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;

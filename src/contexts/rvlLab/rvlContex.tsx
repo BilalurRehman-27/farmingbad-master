@@ -1,6 +1,6 @@
 import React, { createContext } from 'react'
 import blue from '../../assets/images/Blue.png'
-import sushiSwap from '../../assets/images/SushiSWAP.png'
+import sushiSwap from '../../assets/images/SushiSWAP2.png'
 import pickle from '../../assets/images/Pickle 1.png'
 import sushi from '../../assets/images/Sushi.png'
 import valueVfv from '../../assets/images/ValueVFV.png'

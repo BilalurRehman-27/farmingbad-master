@@ -8,6 +8,7 @@ import PageHeader from '../../components/PageHeader'
 import Spacer from '../../components/Spacer'
 import Balances from './components/Balances'
 import Cards from './components/Cards'
+import Footer from '../../components/Footer'
 
 const Home: React.FC = () => {
   return (
@@ -19,13 +20,7 @@ const Home: React.FC = () => {
       />
       <Cards />
       <Spacer size="lg" />
-      {/* <div
-        style={{
-          margin: '0 auto',
-        }}
-      >
-        <Button text="⚗️ Let's Cook" to="/farms" variant="secondary" /> */}
-      {/* </div> */}
+      <Footer />
     </Page>
   )
 }

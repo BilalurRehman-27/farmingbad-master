@@ -24,9 +24,6 @@ const WalletProviderModal: React.FC<any> = ({ onDismiss, currentLogo }) => {
       onDismiss()
     }
   }, [account, onDismiss])
-  const showMyAccountModal = () => {
-    setMyAccountPopup(true)
-  }
 
   const onHandleChildModal = (isVisible: boolean) => {
     setMyAccountPopup(isVisible)
@@ -46,7 +43,7 @@ const WalletProviderModal: React.FC<any> = ({ onDismiss, currentLogo }) => {
             </ImageContainer>
 
             <Elipse className="eclipse_center">
-              <img
+              <IconImage
                 className="logo_adjustment logo_adjustment2_farming"
                 src={currentLogo}
                 alt="logo"
@@ -84,7 +81,16 @@ const WalletProviderModal: React.FC<any> = ({ onDismiss, currentLogo }) => {
     </>
   )
 }
-
+const IconImage = styled.img`
+  display: block;
+  margin: auto;
+  /* Blue1 1 */
+  position: relative;
+  width: 135px;
+  height: 147px;
+  filter: drop-shadow(6px 8px 8px rgba(0, 0, 0, 0.35));
+  margin-bottom: 10px;
+`
 const Elipse = styled.div`
   position: relative;
   //left: 622px;
@@ -128,7 +134,7 @@ const PlusImagedButton = styled.button`
 const TokenStaked = styled.p`
   position: relative;
   text-align: center;
-  font-family: Cooper Md BT;
+  font-family: Fjalla One;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -138,6 +144,7 @@ const TokenStaked = styled.p`
 
 const LogoImage = styled.img`
   padding-left: 10rem;
+
   @media (max-width: 737px) {
     padding-left: 1rem;
     // width: 100px;
@@ -170,7 +177,7 @@ const ImageContainer = styled.div`
 `
 const BalanceForming = styled.p`
   padding-top: 3rem;
-  font-family: Cooper Md BT;
+  font-family: Fjalla One;
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
